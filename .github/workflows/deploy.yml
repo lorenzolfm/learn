@@ -61,12 +61,15 @@ jobs:
       - name: Update image tag in homelab
         run: |
           cd homelab
-          sed -i "s|image: docker.io/lorenzolfm/learn:.*|image: docker.io/lorenzolfm/learn:${{ github.sha }}|" apps/learn/app.yaml
-          git diff --exit-code && { echo "::error::image tag unchanged - check the sed pattern and path"; exit 1; }
+          manifest=apps/learn/app.yaml
+          grep -q "image: docker.io/lorenzolfm/learn:" "$manifest" \
+            || { echo "::error::no learn image line in $manifest - path or pattern is stale"; exit 1; }
+          sed -i "s|image: docker.io/lorenzolfm/learn:.*|image: docker.io/lorenzolfm/learn:${{ github.sha }}|" "$manifest"
 
       - name: Commit and push to homelab
         run: |
           cd homelab
+          git diff --quiet && { echo "image tag already up to date"; exit 0; }
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add apps/learn/app.yaml
