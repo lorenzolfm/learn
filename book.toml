@@ -1,0 +1,18 @@
+[book]
+title = "Learn"
+authors = ["Lorenzo"]
+language = "en"
+src = "src"
+
+[output.html]
+# Served at the root of learn.lorenzo.sh. This is what mdBook uses to resolve
+# asset links on the generated 404 page, which is reached from arbitrary depths.
+site-url = "/"
+default-theme = "rust"
+preferred-dark-theme = "ayu"
+git-repository-url = "https://github.com/lorenzolfm/learn"
+edit-url-template = "https://github.com/lorenzolfm/learn/edit/main/{path}"
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"

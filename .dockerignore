@@ -1,0 +1,9 @@
+.git
+.github
+.direnv
+src
+theme
+flake.nix
+flake.lock
+.envrc
+book.toml
