@@ -1,29 +1,16 @@
 # Introduction
 
-This is a log of things I have taught myself, written down in my own words.
+Hello, there.
 
-It is organised by subject, not by date. That is deliberate. A dated journal
-tells you what I was doing in September; a subject tree tells you what I
-understand. The second one is still useful in a year.
+This is my open learning notebook. I've built it because I believe that the best way of learning about a topic is by explaining it. This website is a forever unfinished work of mine and it was primarily built for myself. I'm leaving it public because, who knows, maybe this can be useful for other people.
 
-## What a page is
+## Contents
 
-One page is **one concept, explained after I understood it**. Not notes taken
-while reading — notes are never finished and never re-read. A page is done when
-I think someone else could read it and get it.
+### Fundamentals
+- [Memory](fundamentals/memory.md)
 
-Most pages follow the same shape:
+### Rust
+- [Ownership](rust/ownership.md)
 
-- the problem the concept solves
-- the rule, stated plainly
-- a minimal example
-- the thing that confused me
-- where I would go deeper
-
-The fourth one is the point. The gotchas are the part worth writing down.
-
-## Corrections
-
-Every page has a "Suggest an edit" pencil in the top bar. If something here is
-wrong, that link is the fastest way to tell me — and being corrected in public
-is most of why this site exists.
+### System Design
+- [From zero to a million](system-design/from-one-to-one-million.md)

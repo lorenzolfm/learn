@@ -2,10 +2,14 @@
 
 [Introduction](README.md)
 
+# Fundamentals
+
+- [Memory](fundamentals/memory.md)
+
 # Rust
 
 - [Ownership](rust/ownership.md)
 
-# Systems
+# System Design
 
-- [How this site is built](systems/how-this-site-is-built.md)
+- [From zero to a million](system-design/from-one-to-one-million.md)
